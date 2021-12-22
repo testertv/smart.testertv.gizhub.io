@@ -1,1 +1,1 @@
-# smart.testertv.gizhub.io
+https://testertv.github.io/smarttestertv/
