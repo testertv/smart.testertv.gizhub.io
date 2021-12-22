@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@font-face {
+	font-family: 'menlo';
+	src:url('src/menlo.woff') format('woff'),
+}
+
+.grid {
+  display: flex;
+}
+
+.button img {
+	/* width: 20%; !! also remove style max width */
+  display: flex;
+	margin-right: 60%;
+}
+
+h3 {
+	margin-left: 45%;
+	font-size: 13px;
+}
+
+p {
+	margin-left: 45%;
+	font-size: 10px;
+}
+@media only screen
+    and (device-width : 375px)
+    and (device-height : 812px)
+    and (-webkit-device-pixel-ratio : 3) {
+
+    .button img {
+    width: 70%;
+		margin-top: 0px;
+    position: center;
+		right: 25%;
+		left: 25%;
+  }
+	p {
+		font-size: 0;
+	}
+	.grid tr td a {
+		width: 30%;
+		height: 200%;
+		left: -15px;
+		padding-top: 60px;
+	}
+	h3 {
+		margin-top: 50px;
+		font-size: 12px;
+		margin-left: 0;
+		text-align: center;
+	}
+	footer form  {
+		display: none;
+	}
+	-webkit-filter {
+		opacity: 0;
+	}
+}
+@media only screen and (max-width: 603px) { /* For narrow devices */
+  .button img {
+    width: 70%;
+		margin-top: 0px;
+    position: absolute;
+		right: 25%;
+		left: 30%;
+  }
+	p {
+		font-size: 0;
+	}
+	.grid tr td a {
+		width: 30%;
+		height: 200%;
+		left: -15px;
+		padding-top: 60px;
+	}
+	h3 {
+		margin-top: 50px;
+		font-size: 12px;
+		margin-left: 0;
+		text-align: center;
+	}
+	footer {
+		display: none;
+	}
+	-webkit-filter {
+		opacity: 0;
+	}
+}
+
+:root {
+	--background-alt: #0e0b16;
+	--background: #0e0b16;
+	--base-txt: #ffffff;
+  --sub-txt: #ffffff;
+  --main-cl: #c143f1;
+  --comp-cl: #7550fe;
+}
+::-webkit-input-placeholder {
+    opacity: 1 !important;
+}
+::-moz-placeholder {
+    opacity: 1 !important;
+}
+
+body, html {
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color: var(--background);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	margin: 0;
+}
+
+div#blackout {
+	transition: 0.1s opacity;
+	background-color: #000;
+	pointer-events: none;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	z-index: 2;
+	opacity: 0.1;
+	margin: 1;
+}
+
+div#grid {
+	margin-left: 0px;
+	margin-top: 0px;
+	position: center;
+	width: 100%;
+	height: 100%;
+	left: 10%;
+	top: 5%;
+}
+div#grid table {
+	font-family: 'menlo', sans-serif;
+	border-collapse: separate;
+	border-spacing: 5px;
+	font-size: 10px;
+}
+
+div#grid table tr td {
+	height: 120px;
+	width: 500px;
+	padding-top: 60px;
+}
+
+div#grid table tr td a {
+	box-shadow: 0px 0px 0 var(--main-cl), 0px 0px 0 var(--comp-cl);
+	transition: .2s text-shadow, .2s box-shadow, .2s border-bottom;
+	border-bottom: 0px solid var(--main-cl);
+	background-color: var(--background-alt);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	color: var(--sub-txt);
+	box-sizing: border-box;
+	text-decoration: none;
+	position: relative;
+	display: block;
+	padding: 4px;
+	height: 100%;
+	width: 100%;
+}
+div#grid p {
+  color: var(--base-txt);
+}
+div#grid table tr td a img {
+	-webkit-filter: drop-shadow(0px 0px 0 var(--main-cl)) drop-shadow(0px 0px 0 var(--comp-cl));
+	filter:drop-shadow(0px 0px 0 var(--main-cl)) drop-shadow(0px 0px 0 var(--comp-cl));
+	transition: .1s -webkit-filter, .1s filter;
+	position: absolute;
+	opacity: 1;
+	right: 1px;
+	z-index: 0;
+	top: 5px;
+}
+div#grid table tr td a:focus img, div#grid table tr td a:hover img {
+	-webkit-filter: drop-shadow(3px 3px 0 var(--main-cl)) drop-shadow(-3px -3px 0 var(--comp-cl));
+	filter:drop-shadow(3px 3px 0 var(--main-cl)) drop-shadow(-3px -3px 0 var(--comp-cl));
+}
+
+.dropdown {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    display: inline-right;
+}
+
+.night-content {
+    right: 0;
+    display: none;
+    background-color: var(--background);
+    min-width: 40px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.night-content button {
+    color: var(--sub-txt);
+    background-color: var(--background);
+    border: 0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .night {
+  display: none;
+}
+.dropdown:hover .night-content{
+  display:block;
+}
+.dropdown:hover {
+  -webkit-filter: drop-shadow(3px 3px 0 var(--main-cl)) drop-shadow(-3px -3px 0 var(--comp-cl));
+	filter:drop-shadow(3px 3px 0 var(--main-cl)) drop-shadow(-3px -3px 0 var(--comp-cl));
+}
+
+
+div#grid table tr td a:focus, div#grid table tr td a:hover {
+	box-shadow: 3px 3px 0 var(--main-cl), -3px -3px 0 var(--comp-cl);
+	outline: 0;
+}
+.night {
+	background-color: var(--background);
+  display: flex;
+	border: none;
+  box-shadow: 3px 3px 0 var(--main-cl), -3px -3px 0 var(--comp-cl);
+  outline: 0;
+
+}
+footer form input[type="text"] {
+	background-color: var(--background-alt);
+  color: var(--comp-cl);
+	border: 0; /*   rip ramp   */
+	border-bottom: 0px solid var(--comp-cl);
+  border-left: 0px solid var(--main-cl);
+	font-size: 0px;
+	position: fixed;
+	display: flex;
+	outline: none;
+	padding: 0px;
+	z-index: 2;
+	bottom: 0%;
+	width: 0%;
+	left: 5%;
+}
+
+footer form input[type="text"]:focus {
+	border-bottom: 4px solid var(--comp-cl);
+  border-left:  4px solid var(--main-cl);
+	color: var(--sub-txt);
+	outline: none;
+
+}
+footer form input[type="text"]:focus::-webkit-input-placeholder {
+	opacity: 0;
+}
+footer form input[type="text"]:focus::-moz-placeholder {
+	opacity: 0;
+}
+input::-webkit-input-placeholder{
+    color:var(--sub-txt);
+}
