@@ -44,6 +44,24 @@ function seekLeft() {
 
 
 
+
+var player = videojs(videoEl, {
+  // make the text track settings dialog not initialize
+  textTrackSettings: false
+});
+
+
+    
+      
+    
+
+      
+    
+
+    
+  
+
+
 function vidFullscreen() {
     if (video.requestFullscreen) {
       video.requestFullscreen();
