@@ -48,10 +48,15 @@ function seekLeft() {
 
 
 
-/* hide the captions settings item from the captions menu */
-.vjs-texttrack-settings {
-  display: none;
-}    
+
+<script>
+
+v = document.getElementById("v")
+v.textTracks[0].mode = "hidden";  // "showing" will make them reappear
+    // if you want to show the controls
+v.controls = true;
+
+</script>
       
     
 
