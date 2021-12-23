@@ -51,7 +51,10 @@ var player = videojs(videoEl, {
 });
 
 
-    
+/* hide the captions settings item from the captions menu */
+.vjs-texttrack-settings {
+  display: none;
+}    
       
     
 
