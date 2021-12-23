@@ -11,6 +11,7 @@ function playM3u8(url){
         video.play();
 	video.controls = true;   // disable control panel
 	      simulateKeyPress("f");
+	      element.dispatchEvent(new KeyboardEvent('keydown',{'key':'a'}));
       });
       document.title = url
     }
