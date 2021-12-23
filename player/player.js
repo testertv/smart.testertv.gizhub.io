@@ -43,13 +43,20 @@ function seekLeft() {
 }
 
 function vidFullscreen() {
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-  } else if (video.mozRequestFullScreen) {
-      video.mozRequestFullScreen();
-  } else if (video.webkitRequestFullscreen) {
+    
+    if (video.webkitRequestFullscreen) {
       video.webkitRequestFullscreen();
     }
+    
+    else if (video.requestFullscreen) {
+      video.requestFullscreen();
+      
+      
+  } else if (video.mozRequestFullScreen) {
+      video.mozRequestFullScreen();
+     
+      
+  } 
 }
 
 playM3u8(window.location.href.split("#")[1])
