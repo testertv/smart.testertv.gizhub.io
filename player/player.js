@@ -47,13 +47,14 @@ function vidFullscreen() {
     if (video.webkitRequestFullscreen) {
       video.webkitRequestFullscreen();
     }
-    
+      else if (video.mozRequestFullScreen) {
+      video.mozRequestFullScreen();
+  
+      
+  } 
+  
     else if (video.requestFullscreen) {
       video.requestFullscreen();
-      
-      
-  } else if (video.mozRequestFullScreen) {
-      video.mozRequestFullScreen();
      
       
   } 
