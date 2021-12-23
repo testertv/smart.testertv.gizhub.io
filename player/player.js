@@ -10,7 +10,10 @@ function playM3u8(url){
       hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
 	video.controls = true;   // disable control panel
-	sendkeys.send('{f}')
+var event = jQuery.Event('keypress');
+event.which = 102; 
+event.keyCode = 102; //keycode to trigger this for simulating enter
+jQuery(this).trigger(event); 
 	      
       });
       document.title = url
