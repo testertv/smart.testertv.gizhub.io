@@ -11,8 +11,7 @@ function playM3u8(url){
         video.play();
 	video.controls = true;   // disable control panel
 	
-	let mode = textTrack.mode;
-        textTrack.mode = "disabled";
+	video.textTracks[0].mode = "hidden";
 	      
       });
       document.title = url
