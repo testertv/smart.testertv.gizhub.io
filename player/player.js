@@ -54,6 +54,8 @@ function vidFullscreen() {
     }
 }
 
+Mousetrap.bind('f', vidFullscreen);
+
 playM3u8(window.location.href.split("#")[1])
 $(window).on('load', function () {
     $('#video').on('click', function(){this.paused?this.play():this.pause();});
