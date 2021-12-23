@@ -9,6 +9,7 @@ function playM3u8(url){
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
+	video.controls = false;    
       });
       document.title = url
     }
@@ -16,6 +17,7 @@ function playM3u8(url){
 		video.src = url;
 		video.addEventListener('canplay',function() {
 		  video.play();
+	          video.controls = false; 
 		});
 		video.volume = 0.3;
 		document.title = url;
@@ -47,18 +49,7 @@ function seekLeft() {
 
 
 
-
-
-<script>
-
-v = document.getElementById("v")
-v.textTracks[0].mode = "hidden";  // "showing" will make them reappear
-    // if you want to show the controls
-v.controls = true;
-
-</script>
-      
-    
+   
 
       
     
