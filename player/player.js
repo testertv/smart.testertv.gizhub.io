@@ -11,7 +11,6 @@ function playM3u8(url){
         video.play();
 	video.controls = true;   // disable control panel
 	      
-	track.mode="hidden";
 	      
       });
       document.title = url
