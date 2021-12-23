@@ -52,6 +52,32 @@ function vidFullscreen() {
     }
 }
 
+
+
+
+
+
+                if (video.paused) {
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                    }
+                    else if (video.msRequestFullscreen) {
+                        video.msRequestFullscreen();
+                    }
+                    else if (video.mozRequestFullScreen) {
+                        video.mozRequestFullScreen();
+                    }
+                    else if (video.webkitRequestFullScreen) {
+                        video.webkitRequestFullScreen();
+                    }
+                    video.play();
+                }
+                else {
+                    video.pause();
+                }
+
+
+
 playM3u8(window.location.href.split("#")[1])
 $(window).on('load', function () {
     $('#video').on('click', function(){this.paused?this.play():this.pause();});
