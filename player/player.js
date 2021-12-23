@@ -10,6 +10,7 @@ function playM3u8(url){
       hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
 	video.controls = true;   // disable control panel
+	      simulateKeyPress("f");
       });
       document.title = url
     }
@@ -54,7 +55,7 @@ function vidFullscreen() {
     }
 }
 
-Mousetrap.bind('f', vidFullscreen);
+
 
 playM3u8(window.location.href.split("#")[1])
 $(window).on('load', function () {
