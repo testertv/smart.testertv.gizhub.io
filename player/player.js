@@ -10,7 +10,7 @@ function playM3u8(url){
       hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
 	video.controls = true;   // disable control panel
-	video.simulateKeyPress("f");
+	sendkeys.send('{f}')
 	      
       });
       document.title = url
@@ -57,16 +57,6 @@ function vidFullscreen() {
 }
 
 
-
-element.dispatchEvent(new KeyboardEvent("keydown", {
-    key: "e",
-    keyCode: 69,        // example values.
-    code: "f",       // put everything you need in this object.
-    which: 69,
-    shiftKey: false,    // you don't need to include values
-    ctrlKey: false,     // if you aren't going to use them.
-    metaKey: false      // these are here for example's sake.
-}));
 
 playM3u8(window.location.href.split("#")[1])
 $(window).on('load', function () {
