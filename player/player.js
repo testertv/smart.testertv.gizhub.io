@@ -23,6 +23,19 @@ function playM3u8(url){
   	}
 }
 
+
+
+
+
+
+for (var i = 0; i < video.textTracks.length; i++) {
+   video.textTracks[i].mode = 'hidden';
+}
+
+
+
+
+
 function playPause() {
     video.paused?video.play():video.pause();
 }
