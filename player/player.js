@@ -70,6 +70,5 @@ $(window).on('load', function () {
     Mousetrap.bind('f', vidFullscreen);
 });
 
-function ausgabe() {
     vidFullscreen();
-}
+
