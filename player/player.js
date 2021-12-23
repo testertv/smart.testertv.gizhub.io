@@ -45,10 +45,7 @@ function seekLeft() {
 
 
 
-var player = videojs(videoEl, {
-  // make the text track settings dialog not initialize
-  textTrackSettings: false
-});
+
 
 
 /* hide the captions settings item from the captions menu */
