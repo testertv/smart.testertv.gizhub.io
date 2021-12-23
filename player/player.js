@@ -42,6 +42,10 @@ function seekLeft() {
     video.currentTime-=5;
 }
 
+.vjs-caption-settings {
+  display: none;
+}
+
 function vidFullscreen() {
     if (video.requestFullscreen) {
       video.requestFullscreen();
