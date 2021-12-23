@@ -9,7 +9,8 @@ function playM3u8(url){
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
-	video.controls = false;   // disable control panel  
+	video.controls = true;   // disable control panel
+	video.vidFullscreen();
       });
       document.title = url
     }
