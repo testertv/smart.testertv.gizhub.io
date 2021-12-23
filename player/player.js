@@ -10,6 +10,13 @@ function playM3u8(url){
       hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
 	video.controls = true;   // disable control panel
+	      
+	      for (var i = 0; i < video.textTracks.length; i++) {
+
+   video.textTracks[i].mode = 'hidden';
+
+}
+	      
       });
       document.title = url
     }
@@ -28,9 +35,7 @@ function playM3u8(url){
 
 
 
-for (var i = 0; i < video.textTracks.length; i++) {
-   video.textTracks[i].mode = 'hidden';
-}
+
 
 
 
