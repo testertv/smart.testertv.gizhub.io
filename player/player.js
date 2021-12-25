@@ -18,7 +18,7 @@ function playM3u8(url){
 		video.src = url;
 		video.addEventListener('canplay',function() {
 		  video.play();
-		  video.controls = false;
+		  video.controls = false;    //turn off/on control panel
 		});
 		video.volume = 0.3;
 		document.title = url;
@@ -49,6 +49,7 @@ function menu() {
 	window.location.href = "../";    //go to the menu page (index.html)
 }
 
+//fullscreen function
 function vidFullscreen() {
     if (video.requestFullscreen) {
       video.requestFullscreen();
