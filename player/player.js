@@ -44,6 +44,10 @@ function seekLeft() {
     video.currentTime-=5;
 }
 
+function menu() {
+	window.location.href = ".../player.html";
+}
+
 function vidFullscreen() {
     if (video.requestFullscreen) {
       video.requestFullscreen();
@@ -63,4 +67,5 @@ $(window).on('load', function () {
     Mousetrap.bind('right', seekRight);
     Mousetrap.bind('left', seekLeft);
     Mousetrap.bind('f', vidFullscreen);
+    Mousetrap.bind('a', menu);
 });
