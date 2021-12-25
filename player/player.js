@@ -11,6 +11,14 @@ function playM3u8(url){
         video.play();
 	video.controls = false;   //turn off/on control panel
 	
+	      
+	      
+	      for (var i = 0; i < video.textTracks.length; i++) {
+   video.textTracks[i].mode = 'hidden';
+}
+
+	      
+	      
       });
       document.title = url
     }
@@ -59,13 +67,6 @@ function vidFullscreen() {
     }
 }
 
-
-    $(document).ready(function() {
-    var video = document.querySelector('#video'); // get the video element
-    var tracks = video.textTracks; // one for each track element
-    var track = tracks[0]; // corresponds to the first track element
-    track.mode = 'hidden';
-});
 
 playM3u8(window.location.href.split("#")[1])
 $(window).on('load', function () {
