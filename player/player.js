@@ -59,7 +59,7 @@ function vidFullscreen() {
     }
 }
 
-<script type="text/javascript">
+
     $(document).ready(function() {
     var video = document.querySelector('#video'); // get the video element
     var tracks = video.textTracks; // one for each track element
