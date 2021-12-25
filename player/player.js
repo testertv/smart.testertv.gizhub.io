@@ -45,7 +45,7 @@ function seekLeft() {
 }
 
 function menu() {
-	window.location.href = "../player.html";
+	window.location.href = "../";
 }
 
 function vidFullscreen() {
