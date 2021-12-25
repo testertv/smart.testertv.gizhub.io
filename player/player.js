@@ -10,8 +10,7 @@ function playM3u8(url){
       hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
 	video.controls = false;   //turn off/on control panel  
-	      console.log(Hls.subtitleTracks);
-	       
+		       
       });
       document.title = url
     }
