@@ -9,7 +9,7 @@ function playM3u8(url){
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
-	video.controls = false;
+	video.controls = false;   //turn off/on control panel
       });
       document.title = url
     }
@@ -45,7 +45,7 @@ function seekLeft() {
 }
 
 function menu() {
-	window.location.href = "../";
+	window.location.href = "../";    //go to the menu page
 }
 
 function vidFullscreen() {
@@ -62,10 +62,12 @@ playM3u8(window.location.href.split("#")[1])
 $(window).on('load', function () {
     $('#video').on('click', function(){this.paused?this.play():this.pause();});
     Mousetrap.bind('space', playPause);
-    Mousetrap.bind('up', volumeUp);
-    Mousetrap.bind('down', volumeDown);
+    //Mousetrap.bind('up', volumeUp);
+    //Mousetrap.bind('down', volumeDown);
+    //Mousetrap.bind('f', vidFullscreen);
     Mousetrap.bind('right', seekRight);
-    Mousetrap.bind('left', seekLeft);
-    Mousetrap.bind('f', vidFullscreen);
-    Mousetrap.bind('a', menu);
+    Mousetrap.bind('left', seekLeft);    
+    Mousetrap.bind('up', menu); // press "up" to activate function "menu"
+    Mousetrap.bind('down', vidFullscreen); // press "down" to activate function "menu"
+
 });
