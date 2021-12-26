@@ -42,7 +42,7 @@ function volumeDown() {
 //}
 
 function seekRight() {
-    <script type="text/javascript" src="../"></script>
+  
 }
 
 //function seekLeft() {
@@ -50,7 +50,7 @@ function seekRight() {
 //}
 
 function seekLeft() {    
-    <script type="text/javascript" src="../"></script>
+    
 }	
 	
 function menu() {
