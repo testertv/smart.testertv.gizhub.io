@@ -37,14 +37,22 @@ function volumeDown() {
     if(video.volume >= 0.1) video.volume-=0.1;
 }
 
+//function seekRight() {
+//    video.currentTime+=5;
+//}
+
 function seekRight() {
-    video.currentTime+=5;
+    <script type="text/javascript" src="../next_channels.js"></script>
 }
 
-function seekLeft() {
-    video.currentTime-=5;
-}
+//function seekLeft() {
+//    video.currentTime-=5;
+//}
 
+function seekLeft() {    
+    <script type="text/javascript" src="../previously_channels.js"></script>
+}	
+	
 function menu() {
 	window.location.href = "../";    //go to the menu page (index.html)
 }
@@ -68,6 +76,9 @@ $(window).on('load', function () {
     //Mousetrap.bind('up', volumeUp);
     //Mousetrap.bind('down', volumeDown);
     //Mousetrap.bind('f', vidFullscreen);
+    //Mousetrap.bind('right', seekRight);
+    //Mousetrap.bind('left', seekLeft); 
+	
     Mousetrap.bind('right', seekRight);
     Mousetrap.bind('left', seekLeft);    
     Mousetrap.bind('up', menu); // press "up" to activate function "menu"
