@@ -42,10 +42,7 @@ function volumeDown() {
 //}
 
 function seekRight() {
-  $.getscript("../next_channels.js",function(){
-	  alert("test");
-fn();
-});
+
 }
 
 //function seekLeft() {
