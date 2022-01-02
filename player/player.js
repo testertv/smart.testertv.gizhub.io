@@ -25,7 +25,7 @@ function playM3u8(url){
 		});
 		video.volume = 0.3;
 		document.title = url;
-  	}vidFullscreen();
+  	}
 }
 
 function playPause() {
