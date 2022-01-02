@@ -10,7 +10,9 @@ function playM3u8(url){
       hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
 	video.controls = true   //turn off/on control panel  
-		       
+	trackSelector.setRendererDisabled(TRACK_TEXT, true);
+	trackSelector.clearSelectionOverrides();
+			       
       });
       document.title = url
     }
